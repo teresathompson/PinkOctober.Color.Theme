@@ -46,13 +46,21 @@ steps:
     patchVersion: '0'
     allowPackageConflicts: true
     packDestination: '$(Build.ArtifactStagingDirectory)'
-
+    
 - task: NuGetCommand@2
   displayName: 'Enviando NuGet para o NuGet.Org'
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'internal'
-    #publica para FeedProjetoExemplo
-    publishVstsFeed: '458c39a4-b54f-4f21-bf7e-603c9204f311'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'PinkTheme'
+
+# - task: NuGetCommand@2
+#   displayName: 'Enviando NuGet para o NuGet.Org'
+#   inputs:
+#     command: 'push'
+#     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+#     nuGetFeedType: 'internal'
+#     #publica para FeedProjetoExemplo
+#     publishVstsFeed: '458c39a4-b54f-4f21-bf7e-603c9204f311'
     
