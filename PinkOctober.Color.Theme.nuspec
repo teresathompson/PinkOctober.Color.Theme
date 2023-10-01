@@ -4,6 +4,7 @@
     <id>PinkOctober.Color.Theme</id>
     <version>1.0.0-beta.1.0</version>
     <authors>Teresa Anne Thompson</authors>
+    <icon>images\pink_ribbon.png</icon>
     <readme>README.md</readme>    
     <description>This color theme is designed to raise awareness and support for Breast Cancer Awareness Month. It features a vibrant pink color scheme to symbolize hope, strength, and solidarity in the fight against breast cancer. By using this theme for your NuGet packages, you can show your support for breast cancer awareness and contribute to a noble cause.</description>
     <projectUrl>https://github.com/teresathompson/PinkOctober.Color.Theme</projectUrl>
@@ -12,11 +13,9 @@
       <dependency id="Microsoft.Windows.SDK.BuildTools" version="10.0.22621.755" />
     </dependencies>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <icon>images\pink_ribbon.png</icon>   
   </metadata>
   <files>
     <file src="bin\x64\Release\net6.0-windows10.0.19041.0\**.*" target="lib" />
-    <file src="bin\x86\Release\net6.0-windows10.0.19041.0\**.*" target="lib" />
     <file src="images\pink_ribbon.png" target="images\" /> 
     <file src="README.md" target="" />         
   </files>
