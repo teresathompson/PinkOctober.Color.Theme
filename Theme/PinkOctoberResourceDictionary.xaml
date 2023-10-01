@@ -2,6 +2,26 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PinkOctober.Color.Theme.Theme">
-
+    xmlns:ui="using:Windows.UI">
+    <!--Colors tested to have good to excellent contrast against ApplicationPageBackgroundThemeBrush following WCAG-->
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <ui:Color x:Key="SystemAccentColorLight3">#CC0066</ui:Color>
+            <ui:Color x:Key="SystemAccentColorLight2">#B8005C</ui:Color>
+            <ui:Color x:Key="SystemAccentColorLight1">#A30052</ui:Color>
+            <ui:Color x:Key="SystemAccentColor">#8F0047</ui:Color>
+            <ui:Color x:Key="SystemAccentColorDark1">#7A003D</ui:Color>
+            <ui:Color x:Key="SystemAccentColorDark2">#660033</ui:Color>
+            <ui:Color x:Key="SystemAccentColorDark3">#520029</ui:Color>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+            <ui:Color x:Key="SystemAccentColorLight3">#FFEBF5</ui:Color>
+            <ui:Color x:Key="SystemAccentColorLight2">#FFD6EB</ui:Color>
+            <ui:Color x:Key="SystemAccentColorLight1">#FFC2E2</ui:Color>
+            <ui:Color x:Key="SystemAccentColor">#FFADD9</ui:Color>
+            <ui:Color x:Key="SystemAccentColorDark1">#FF99CF</ui:Color>
+            <ui:Color x:Key="SystemAccentColorDark2">#FF85C6</ui:Color>
+            <ui:Color x:Key="SystemAccentColorDark3">#FF70BC</ui:Color>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
