@@ -6,7 +6,7 @@ pool:
 
 variables:
   solution: 'PinkOctober.Color.Theme.csproj'
-  buildPlatform: 'x64'
+  buildPlatform: 'x64,x86'
   buildConfiguration: 'Release'
 
 steps:
