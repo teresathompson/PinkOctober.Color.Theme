@@ -1,0 +1,58 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: 'PinkOctober.Color.Theme.csproj'
+  buildPlatform: 'x64'
+  buildConfiguration: 'Release'
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Use .NET 6 Core sdk'
+  inputs:
+    packageType: 'sdk'
+    version: '6.0.x'
+    includePreviewVersions: true
+
+- task: NuGetToolInstaller@1
+  displayName: 'Instalando NuGet'
+
+- task: NuGetCommand@2
+  displayName: 'Restaurando NuGet'
+  inputs:
+    command: 'restore'
+    restoreSolution: '$(solution)'
+    feedsToUse: 'select'
+
+- task: VSBuild@1
+  displayName: 'Fazendo build'
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'Empacotando NuGet'
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/PinkOctober.Color.Theme.nuspec'
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
+    allowPackageConflicts: true
+    packDestination: '$(Build.ArtifactStagingDirectory)'
+
+- task: NuGetCommand@2
+  displayName: 'Enviando NuGet para o NuGet.Org'
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    #publica para FeedProjetoExemplo
+    publishVstsFeed: '458c39a4-b54f-4f21-bf7e-603c9204f311'
+    
