@@ -1,9 +1,8 @@
 # PinkOctober.Color.Theme NuGet Package
 
-
 ## Overview
 
-<img src="https://i.imgur.com/tPXxHJM.png" title="source: imgur.com" width="50"/>
+<img src="https://i.imgur.com/tPXxHJM.png" title="source: imgur.com" width="70"/>  
 
 The PinkOctober.Color.Theme NuGet package offers a visually appealing pink color palette to enhance the aesthetics of your applications. With a soft and vibrant pink color scheme, this theme adds a touch of elegance and warmth to your user interfaces.
 
@@ -21,13 +20,13 @@ To integrate the PinkOctober.Color.Theme into your project, follow these easy st
 
 1. Install the NuGet package using your preferred package manager:
 
-   ```bash
+   ```
    Install-Package PinkOctober.Color.Theme
    ```
 
 2. In your application's XAML files, merge the Pink Color Theme Resource Dictionary:
 
-   ```xml
+  ```xml
   <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -44,24 +43,21 @@ To integrate the PinkOctober.Color.Theme into your project, follow these easy st
 
 ## Usage
 
-Once you've integrated the Pink Color Theme, you can use its styles in your XAML:
+Once you have referenced the package in the App.xaml file, the pink theme will apply to all components. 
 
-```xml
-<Button Style="{StaticResource AccentButtonStyle}">Click Me</Button>
-```
 
-### ListView with PinkOctober.Color.Theme
-
-<img src="https://i.imgur.com/5rd7CoKm.png" title="source: imgur.com" />
-
-## Example
+## Examples
 
 Here's an example of how the PinkOctober.Color.Theme can be applied to a simple button:
 
 ```xml
 <Button Style="{StaticResource AccentButtonStyle}">Click Me</Button>
 ```
+<img src="https://i.imgur.com/JLxPjaNm.png" title="source: imgur.com" />
 
+ListView with PinkOctober.Color.Theme:
+
+<img src="https://i.imgur.com/5rd7CoKm.png" title="source: imgur.com" />
 
 ## Credits
 
