@@ -16,7 +16,6 @@
   </metadata>
   <files>
     <file src="bin\x64\Release\net6.0-windows10.0.19041.0\**.*" target="lib" />
-    <file src="bin\x86\Release\net6.0-windows10.0.19041.0\**.*" target="lib" />
     <file src="images\pink_ribbon.png" target="images\" /> 
     <file src="README.md" target="" />         
   </files>
